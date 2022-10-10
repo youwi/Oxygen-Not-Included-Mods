@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MiniBase.Properties {
+namespace MiniBase2.Properties {
     using System;
     
     

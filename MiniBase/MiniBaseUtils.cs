@@ -1,9 +1,9 @@
 ﻿using System;
 using UnityEngine;
 using Klei.CustomSettings;
-using static MiniBase.MiniBaseConfig;
+using static MiniBase2.MiniBaseConfig;
 
-namespace MiniBase
+namespace MiniBase2
 {
     class MiniBaseUtils
     {

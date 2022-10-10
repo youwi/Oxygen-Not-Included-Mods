@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MiniBase.Profiles
+namespace MiniBase2.Profiles
 {
     class MiniBaseCoreBiomeProfiles
     {

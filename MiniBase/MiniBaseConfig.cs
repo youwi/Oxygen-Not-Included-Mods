@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using static MiniBase.MiniBaseOptions;
+using static MiniBase2.MiniBaseOptions;
 
-namespace MiniBase
+namespace MiniBase2
 {
     public class MiniBaseConfig
     {
@@ -21,7 +21,7 @@ namespace MiniBase
 
         public static string ClusterName = "MiniBase";
         public static string ClusterDescription = "An encapsulated location with just enough to get by.\n\n<smallcaps>Customize this location by clicking MiniBase Options in the Mods menu.</smallcaps>\n\n";
-        public static string ClusterIconName = "Asteroid_minibase";
+       // public static string ClusterIconName = "Asteroid_minibase";
 
         public static Dictionary<FeatureType, string> GeyserDictionary = new Dictionary<FeatureType, string>()
         {

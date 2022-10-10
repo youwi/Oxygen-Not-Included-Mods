@@ -10,10 +10,10 @@ using UnityEngine;
 using Delaunay.Geo;
 using VoronoiTree;
 using TemplateClasses;
-using static MiniBase.MiniBaseConfig;
-using static MiniBase.MiniBaseUtils;
+using static MiniBase2.MiniBaseConfig;
+using static MiniBase2.MiniBaseUtils;
 
-namespace MiniBase
+namespace MiniBase2
 {
     public class MiniBaseWorldGen
     {

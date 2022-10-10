@@ -28,11 +28,11 @@ using ProcGen;
 using ProcGenGame;
 using PeterHan.PLib.Options;
 using System.Linq;
-using static MiniBase.MiniBaseConfig;
-using static MiniBase.MiniBaseUtils;
+using static MiniBase2.MiniBaseConfig;
+using static MiniBase2.MiniBaseUtils;
 using UnityEngine;
 using System.IO;
-using MiniBase;
+using MiniBase2;
 
 namespace MiniBase2
 {
