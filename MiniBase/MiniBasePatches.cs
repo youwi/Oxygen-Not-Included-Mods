@@ -28,13 +28,13 @@ using ProcGen;
 using ProcGenGame;
 using PeterHan.PLib.Options;
 using System.Linq;
-using static MiniBase2.MiniBaseConfig;
-using static MiniBase2.MiniBaseUtils;
+using static MiniBase.MiniBaseConfig;
+using static MiniBase.MiniBaseUtils;
 using UnityEngine;
 using System.IO;
-using MiniBase2;
+using MiniBase;
 
-namespace MiniBase2
+namespace MiniBase
 {
   public class MiniBasePatches : KMod.UserMod2
   {
@@ -68,7 +68,7 @@ namespace MiniBase2
       public static void Prefix()
       {
         Log("Game_OnPrefabInit_Patch Prefix");
-        MiniBaseOptions.Reload();
+        MiniBaseOptions.Reload();//修改
       }
     }
 
@@ -171,14 +171,18 @@ namespace MiniBase2
       public static void Prefix()
       {
         Log("Db_Initialize_Patch Prefix---------------------------------");
-        //  Strings.Add($"STRINGS.WORLDS.{ClusterName.ToUpperInvariant()}.NAME", ClusterName);
-        //  Strings.Add($"STRINGS.WORLDS.{ClusterName.ToUpperInvariant()}.DESCRIPTION", ClusterDescription);
+        
+        string ClusterIconName = "Asteroid_minibase";
+        Strings.Add($"STRINGS.WORLDS.{ClusterName.ToUpperInvariant()}.NAME", ClusterName);
+        Strings.Add($"STRINGS.WORLDS.{ClusterName.ToUpperInvariant()}.DESCRIPTION", ClusterDescription);
+        Strings.Add($"STRINGS.CLUSTER_NAMES.{ClusterIconName.ToUpperInvariant()}.NAME", ClusterIconName);
+        Strings.Add($"STRINGS.CLUSTER_NAMES.{ClusterIconName.ToUpperInvariant()}.DESCRIPTION", ClusterDescription);
 
-        //  string spritePath = System.IO.Path.Combine(ModPath, ClusterIconName) + ".png";
-        //  Texture2D texture = new Texture2D(2, 2, TextureFormat.RGBA32, false);
-        ////  ImageConversion.LoadImage(texture, File.ReadAllBytes(spritePath));
-        //  Sprite sprite = Sprite.Create(texture, new Rect(0f, 0f, 512f, 512f), Vector2.zero);
-        //  Assets.Sprites.Add(ClusterIconName, sprite);
+        string spritePath = System.IO.Path.Combine(ModPath, ClusterIconName) + ".png";
+        Texture2D texture = new Texture2D(2, 2, TextureFormat.RGBA32, false);
+        ImageConversion.LoadImage(texture, File.ReadAllBytes(spritePath));
+        Sprite sprite = Sprite.Create(texture, new Rect(0f, 0f, 512f, 512f), Vector2.zero);
+        Assets.Sprites.Add(ClusterIconName, sprite);
       }
     }
 

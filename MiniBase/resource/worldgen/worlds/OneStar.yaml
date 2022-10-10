@@ -1,0 +1,167 @@
+#
+name: STRINGS.WORLDS.TINYSURFACE.NAME
+description: STRINGS.WORLDS.TINYSURFACE.DESCRIPTION
+disableWorldTraits: false
+asteroidIcon: asteroid_swamp_rocket_kanim
+
+worldTraitScale: 0.12
+worldsize:
+  X: 70
+  Y: 100
+layoutMethod: PowerTree
+
+defaultsOverrides:
+  data:
+    OverworldAvoidRadius: 5
+    OverworldSampleBehaviour: PoissonDisk
+    OverworldDensityMin: 10
+    OverworldDensityMax: 10
+    DrawWorldBorder: true
+    DrawWorldBorderForce: false
+    WorldBorderThickness: 2
+    WorldBorderRange: 0
+#    OverworldMinNodes: 1
+
+worldTraitRules:  []  #关闭特性设置. 很容易崩溃
+storyTraits: []  # 故事特性强设为空
+#globalFeatures: []
+#additionalSubworldFiles: []
+#additionalUnknownCellFilters: []
+#additionalWorldTemplateRules: []
+
+fixedTraits:
+  - sunlightVeryVeryHigh
+  - cosmicRadiationHigh
+
+ 
+# List all the subworld files to load
+# List all the subworld files to load
+startSubworldName: subworlds/sandstone/SandstoneStart
+startingBaseTemplate: bases/sandstoneBase
+
+worldTemplateRules:
+  - names: 
+    - geysers/steam
+    - geysers/chlorine_gas
+    - geysers/methane
+    - geysers/filthy_water
+    - geysers/hot_hydrogen
+    - geysers/small_volcano
+    - geysers/slush_water
+    - geysers/molten_copper    
+    - geysers/molten_gold    
+    - poi/pure_geyser
+    - expansion1::geysers/slush_salt_water
+    - expansion1::geysers/dirty_slush
+    - expansion1::geysers/molten_cobalt
+    - expansion1::geysers/slush_salt_water
+    - expansion1::geysers/liquid_sulfur
+    - expansion1::geysers/molten_niobium
+    - expansion1::geysers/molten_aluminum
+    - expansion1::geysers/molten_tungsten
+    listRule: TryOne
+    times: 10
+    allowDuplicates: false
+    priority: 10
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 2
+        maxDistance: 10
+      - command: ExceptWith
+        zoneTypes: [ Space ]
+      - command: ExceptWith
+        tagcommand: AtTag
+        tag: NoGlobalFeatureSpawning
+
+
+subworldFiles:
+  - name: subworlds/space/Space
+  - name: subworlds/space/SurfaceCrags
+  - name: subworlds/sandstone/SandstoneStart
+  - name: subworlds/sandstone/Sandstone
+  - name: subworlds/frozen/Frozen
+  - name: subworlds/marsh/HotMarsh
+  - name: subworlds/ocean/OceanHot
+  - name: subworlds/onestar/OneStarSub
+  - name: subworlds/onestar/OneStarPOI
+  - name: subworlds/oil/OilPockets
+  - name: subworlds/jungle/Jungle
+  - name: subworlds/rust/RustWarm
+  - name: subworlds/forest/ForestHot
+
+
+
+unknownCellsAllowedSubworlds: 
+  - tagcommand: Default
+    command: Replace
+    subworldNames:
+      - subworlds/sandstone/Sandstone
+  - tagcommand: AtTag
+    tag: AtSurface
+    command: Replace
+    subworldNames:
+      - subworlds/space/Space
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - subworlds/space/SurfaceCrags
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 2
+    maxDistance: 2
+    command: Replace
+    subworldNames:
+      - subworlds/frozen/Frozen
+      - subworlds/marsh/HotMarsh
+      - subworlds/jungle/Jungle
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 3
+    maxDistance: 3
+    command: Replace
+    subworldNames:
+      - subworlds/magma/Bottom
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 4
+    maxDistance: 4
+    command: Replace
+    subworldNames:
+      - subworlds/onestar/OneStarSub
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 4
+    maxDistance: 4
+    command: Replace
+    subworldNames:
+      - subworlds/onestar/OneStarSub
+  - tagcommand: DistanceFromTag
+    tag: AtDepths
+    minDistance: 5
+    maxDistance: 5
+    command: Replace
+    subworldNames:
+      - subworlds/oil/OilPockets
+  - tagcommand: DistanceFromTag
+    tag: AtDepths
+    minDistance: 6
+    maxDistance: 6
+    command: Replace
+    subworldNames:
+      - subworlds/onestar/OneStarPOI
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 5
+    maxDistance: 6
+    command: Replace
+    subworldNames:
+      - subworlds/marsh/HotMarsh
+      - subworlds/jungle/Jungle
+      - subworlds/ocean/OceanHot
+      - subworlds/rust/RustWarm
+      - subworlds/forest/ForestHot

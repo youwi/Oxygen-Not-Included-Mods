@@ -10,10 +10,10 @@ using UnityEngine;
 using Delaunay.Geo;
 using VoronoiTree;
 using TemplateClasses;
-using static MiniBase2.MiniBaseConfig;
-using static MiniBase2.MiniBaseUtils;
+using static MiniBase.MiniBaseConfig;
+using static MiniBase.MiniBaseUtils;
 
-namespace MiniBase2
+namespace MiniBase
 {
     public class MiniBaseWorldGen
     {
@@ -386,6 +386,7 @@ namespace MiniBase2
             int leftCenterX = (Left(true) + Left(false)) / 2;
             int rightCenterX = (Right(false) + Right(true)) / 2;
             int adjustedCornerSize = CORNER_SIZE + (int) Math.Ceiling(BORDER_SIZE / 2f);
+            adjustedCornerSize = 0;//强制修改为0
             for (int i = 0; i < adjustedCornerSize; i++)
                 for (int j = adjustedCornerSize; j > i; j--)
                 {

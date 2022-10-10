@@ -1,7 +1,9 @@
 ﻿{
 	"General": {
 		"InputAssemblies": [
-			"PLib.dll"
+			"PLib.dll",
+			"Newtonsoft.Json.dll"
+
 		],
 		"OutputFile": "$(TargetDir)mod-MiniBase-merged.dll"
 	},

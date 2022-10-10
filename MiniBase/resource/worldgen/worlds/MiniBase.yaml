@@ -1,12 +1,15 @@
 name: STRINGS.WORLDS.MINIBASE.NAME
 description: STRINGS.WORLDS.MINIBASE.DESCRIPTION
-asteroidIcon: asteroid_minibase_kanim
+asteroidIcon: asteroid_swamp_rocket_kanim
 disableWorldTraits: true
 
 worldsize:
   X: 128
   Y: 128
 layoutMethod: PowerTree
+
+worldTraitRules:  []  #关闭特性设置. 很容易崩溃
+storyTraits: []  # 故事特性强设为空
 
 defaultsOverrides:
   data:
@@ -35,6 +38,11 @@ unknownCellsAllowedSubworlds:
     tag: AtStart
     minDistance: 1
     maxDistance: 999
+    command: Replace
+    subworldNames:
+      - subworlds/forest/Forest
+  - tagcommand: AtTag
+    tag: AtSurface
     command: Replace
     subworldNames:
       - subworlds/space/Space

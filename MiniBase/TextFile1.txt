@@ -10,3 +10,6 @@ copy "$(TargetName)-merged.dll" "%HOMEPATH%\Documents\Klei\OxygenNotIncluded\mod
 xcopy /y /s $(TargetDir)\mod*  $(ONI_MOD_LOCAL)\$(ProjectName)\
 
 xcopy /y /s $(TargetDir)\mod*  $(ONI_MOD_LOCAL)\$(ProjectName)\
+
+
+			"Newtonsoft.Json.dll"

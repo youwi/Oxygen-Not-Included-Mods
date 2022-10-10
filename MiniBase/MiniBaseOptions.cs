@@ -1,10 +1,10 @@
 ﻿using Newtonsoft.Json;
 using PeterHan.PLib.Options;
 using System.Collections.Generic;
-using static MiniBase2.Profiles.MiniBaseBiomeProfiles;
-using static MiniBase2.Profiles.MiniBaseCoreBiomeProfiles;
+using static MiniBase.Profiles.MiniBaseBiomeProfiles;
+using static MiniBase.Profiles.MiniBaseCoreBiomeProfiles;
 
-namespace MiniBase2
+namespace MiniBase
 {
     [ConfigFile("config.json", true)]
     [JsonObject(MemberSerialization.OptIn)]
