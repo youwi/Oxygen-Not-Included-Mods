@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{35A3E8B5-854C-42AB-832F-B85D462B8B0B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OmniFloraDecorativePlants</RootNamespace>
+    <AssemblyName>OmniFloraDecorativePlants</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasePlant.cs" />
+    <Compile Include="BaseSharlesPlantConfig.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="ColdLovingPlant.cs" />
+    <Compile Include="FrostBlossomConfig.cs" />
+    <Compile Include="IcyShroomConfig.cs" />
+    <Compile Include="MyrthRoseConfig.cs" />
+    <Compile Include="PricklyLotusConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReactivePlant.cs" />
+    <Compile Include="RustFernConfig.cs" />
+    <Compile Include="SharlesPlant.cs" />
+    <Compile Include="SharlesPlantsPatches.cs" />
+    <Compile Include="SharlesPlantsTuning.cs" />
+    <Compile Include="ShlurpCoralConfig.cs" />
+    <Compile Include="SporeLampConfig.cs" />
+    <Compile Include="TropicalgaeConfig.cs" />
+    <Compile Include="WarmLovingPlant.cs" />
+    <Compile Include="WaterPlant.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Art\anim\assets\frostblossom\frostblossom_anim.bytes" />
+    <None Include="Art\anim\assets\frostblossom\frostblossom_build.bytes" />
+    <None Include="Art\anim\assets\icyshroom\icyshroom_anim.bytes" />
+    <None Include="Art\anim\assets\icyshroom\icyshroom_build.bytes" />
+    <None Include="Art\anim\assets\myrthrose\myrthrose_anim.bytes" />
+    <None Include="Art\anim\assets\myrthrose\myrthrose_build.bytes" />
+    <None Include="Art\anim\assets\pricklylotus\pricklylotus_anim.bytes" />
+    <None Include="Art\anim\assets\pricklylotus\pricklylotus_build.bytes" />
+    <None Include="Art\anim\assets\rustfern\rustfern_anim.bytes" />
+    <None Include="Art\anim\assets\rustfern\rustfern_build.bytes" />
+    <None Include="Art\anim\assets\seed_frostblossom\seed_frostblossom_anim.bytes" />
+    <None Include="Art\anim\assets\seed_frostblossom\seed_frostblossom_build.bytes" />
+    <None Include="Art\anim\assets\seed_icyshroom\seed_icyshroom_anim.bytes" />
+    <None Include="Art\anim\assets\seed_icyshroom\seed_icyshroom_build.bytes" />
+    <None Include="Art\anim\assets\seed_myrthrose\seed_rosemyrth_anim.bytes" />
+    <None Include="Art\anim\assets\seed_myrthrose\seed_rosemyrth_build.bytes" />
+    <None Include="Art\anim\assets\seed_pricklylotus\seed_pricklylotus_anim.bytes" />
+    <None Include="Art\anim\assets\seed_pricklylotus\seed_pricklylotus_build.bytes" />
+    <None Include="Art\anim\assets\seed_rustfern\seed_rustfern_anim.bytes" />
+    <None Include="Art\anim\assets\seed_rustfern\seed_rustfern_build.bytes" />
+    <None Include="Art\anim\assets\seed_shlurpcoral\seed_shlurpcoral_anim.bytes" />
+    <None Include="Art\anim\assets\seed_shlurpcoral\seed_shlurpcoral_build.bytes" />
+    <None Include="Art\anim\assets\seed_sporelamp\seed_sporelamp_anim.bytes" />
+    <None Include="Art\anim\assets\seed_sporelamp\seed_sporelamp_build.bytes" />
+    <None Include="Art\anim\assets\seed_tropicalgae\seed_tropicalgae_anim.bytes" />
+    <None Include="Art\anim\assets\seed_tropicalgae\seed_tropicalgae_build.bytes" />
+    <None Include="Art\anim\assets\shlurpcoral\shlurpcoral_anim.bytes" />
+    <None Include="Art\anim\assets\shlurpcoral\shlurpcoral_build.bytes" />
+    <None Include="Art\anim\assets\sporelamp\sporelamp_anim.bytes" />
+    <None Include="Art\anim\assets\sporelamp\sporelamp_build.bytes" />
+    <None Include="Art\anim\assets\tropicalgae\tropicalgae_anim.bytes" />
+    <None Include="Art\anim\assets\tropicalgae\tropicalgae_build.bytes" />
+    <None Include="Art\Art Source\Frost Blossom Seed\seed_frostblossom.scml" />
+    <None Include="Art\Art Source\Frost Blossom\frostblossom.scml" />
+    <None Include="Art\Art Source\Icy Shroom Seed\seed_icyshroom.scml" />
+    <None Include="Art\Art Source\Icy Shroom\icyshroom.scml" />
+    <None Include="Art\Art Source\Myrth Rose Seed\seed_rosemyrth.scml" />
+    <None Include="Art\Art Source\Myrth Rose\myrthrose.scml" />
+    <None Include="Art\Art Source\Prickly Lotus Seed\seed_pricklylotus.scml" />
+    <None Include="Art\Art Source\Prickly Lotus\pricklylotus.scml" />
+    <None Include="Art\Art Source\Rust Fern Seed\seed_rustfern.scml" />
+    <None Include="Art\Art Source\Rust Fern\rustfern.scml" />
+    <None Include="Art\Art Source\Shlurp Coral Seed\seed_shlurpcoral.scml" />
+    <None Include="Art\Art Source\Shlurp Coral\shlurpcoral.scml" />
+    <None Include="Art\Art Source\Spore Lamp Seed\seed_sporelamp.scml" />
+    <None Include="Art\Art Source\Spore Lamp\sporelamp.scml" />
+    <None Include="Art\Art Source\Tropicalgae Seed\seed_tropicalgae.scml" />
+    <None Include="Art\Art Source\Tropicalgae\tropicalgae.scml" />
+    <None Include="Art\LICENSE" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Art\anim\assets\frostblossom\frostblossom.png" />
+    <Content Include="Art\anim\assets\icyshroom\icyshroom.png" />
+    <Content Include="Art\anim\assets\myrthrose\myrthrose.png" />
+    <Content Include="Art\anim\assets\pricklylotus\pricklylotus.png" />
+    <Content Include="Art\anim\assets\rustfern\rustfern.png" />
+    <Content Include="Art\anim\assets\seed_frostblossom\seed_frostblossom.png" />
+    <Content Include="Art\anim\assets\seed_icyshroom\seed_icyshroom.png" />
+    <Content Include="Art\anim\assets\seed_myrthrose\seed_rosemyrth.png" />
+    <Content Include="Art\anim\assets\seed_pricklylotus\seed_pricklylotus.png" />
+    <Content Include="Art\anim\assets\seed_rustfern\seed_rustfern.png" />
+    <Content Include="Art\anim\assets\seed_shlurpcoral\seed_shlurpcoral.png" />
+    <Content Include="Art\anim\assets\seed_sporelamp\seed_sporelamp.png" />
+    <Content Include="Art\anim\assets\seed_tropicalgae\seed_tropicalgae.png" />
+    <Content Include="Art\anim\assets\shlurpcoral\shlurpcoral.png" />
+    <Content Include="Art\anim\assets\sporelamp\sporelamp.png" />
+    <Content Include="Art\anim\assets\tropicalgae\tropicalgae.png" />
+    <Content Include="Art\Art Source\Frost Blossom Seed\seed_frostblossom_0.png" />
+    <Content Include="Art\Art Source\Frost Blossom Seed\ui_0.png" />
+    <Content Include="Art\Art Source\Frost Blossom\frostblossom_0.png" />
+    <Content Include="Art\Art Source\Frost Blossom\frostblossom_1.png" />
+    <Content Include="Art\Art Source\Frost Blossom\frostblossom_2.png" />
+    <Content Include="Art\Art Source\Frost Blossom\frostblossom_place_0.png" />
+    <Content Include="Art\Art Source\Frost Blossom\frostblossom_wilt_0.png" />
+    <Content Include="Art\Art Source\Frost Blossom\ui_0.png" />
+    <Content Include="Art\Art Source\Icy Shroom Seed\seed_icyshroom_0.png" />
+    <Content Include="Art\Art Source\Icy Shroom Seed\ui_0.png" />
+    <Content Include="Art\Art Source\Icy Shroom\icyshroom_0.png" />
+    <Content Include="Art\Art Source\Icy Shroom\icyshroom_1.png" />
+    <Content Include="Art\Art Source\Icy Shroom\icyshroom_2.png" />
+    <Content Include="Art\Art Source\Icy Shroom\icyshroom_place_0.png" />
+    <Content Include="Art\Art Source\Icy Shroom\icyshroom_wilt_0.png" />
+    <Content Include="Art\Art Source\Icy Shroom\ui_0.png" />
+    <Content Include="Art\Art Source\Myrth Rose Seed\seed_myrthrose_0.png" />
+    <Content Include="Art\Art Source\Myrth Rose Seed\ui_0.png" />
+    <Content Include="Art\Art Source\Myrth Rose\myrthrose_0.png" />
+    <Content Include="Art\Art Source\Myrth Rose\myrthrose_1.png" />
+    <Content Include="Art\Art Source\Myrth Rose\myrthrose_2.png" />
+    <Content Include="Art\Art Source\Myrth Rose\myrthrose_place_0.png" />
+    <Content Include="Art\Art Source\Myrth Rose\myrthrose_wilt_0.png" />
+    <Content Include="Art\Art Source\Myrth Rose\ui_0.png" />
+    <Content Include="Art\Art Source\Prickly Lotus Seed\seed_pricklylotus_0.png" />
+    <Content Include="Art\Art Source\Prickly Lotus Seed\ui_0.png" />
+    <Content Include="Art\Art Source\Prickly Lotus\pricklylotus_0.png" />
+    <Content Include="Art\Art Source\Prickly Lotus\pricklylotus_1.png" />
+    <Content Include="Art\Art Source\Prickly Lotus\pricklylotus_2.png" />
+    <Content Include="Art\Art Source\Prickly Lotus\pricklylotus_place_0.png" />
+    <Content Include="Art\Art Source\Prickly Lotus\pricklylotus_wilt_0.png" />
+    <Content Include="Art\Art Source\Prickly Lotus\ui_0.png" />
+    <Content Include="Art\Art Source\Rust Fern Seed\seed_rustfern_0.png" />
+    <Content Include="Art\Art Source\Rust Fern Seed\ui_0.png" />
+    <Content Include="Art\Art Source\Rust Fern\rustfern_0.png" />
+    <Content Include="Art\Art Source\Rust Fern\rustfern_1.png" />
+    <Content Include="Art\Art Source\Rust Fern\rustfern_2.png" />
+    <Content Include="Art\Art Source\Rust Fern\rustfern_place_0.png" />
+    <Content Include="Art\Art Source\Rust Fern\rustfern_wilt_0.png" />
+    <Content Include="Art\Art Source\Rust Fern\ui_0.png" />
+    <Content Include="Art\Art Source\Shlurp Coral Seed\seed_shlurpcoral_0.png" />
+    <Content Include="Art\Art Source\Shlurp Coral Seed\ui_0.png" />
+    <Content Include="Art\Art Source\Shlurp Coral\shlurpcoral_0.png" />
+    <Content Include="Art\Art Source\Shlurp Coral\shlurpcoral_1.png" />
+    <Content Include="Art\Art Source\Shlurp Coral\shlurpcoral_2.png" />
+    <Content Include="Art\Art Source\Shlurp Coral\shlurpcoral_place_0.png" />
+    <Content Include="Art\Art Source\Shlurp Coral\shlurpcoral_wilt_0.png" />
+    <Content Include="Art\Art Source\Shlurp Coral\ui_0.png" />
+    <Content Include="Art\Art Source\Spore Lamp Seed\seed_sporelamp_0.png" />
+    <Content Include="Art\Art Source\Spore Lamp Seed\ui_0.png" />
+    <Content Include="Art\Art Source\Spore Lamp\sporelamp_0.png" />
+    <Content Include="Art\Art Source\Spore Lamp\sporelamp_1.png" />
+    <Content Include="Art\Art Source\Spore Lamp\sporelamp_2.png" />
+    <Content Include="Art\Art Source\Spore Lamp\sporelamp_place_0.png" />
+    <Content Include="Art\Art Source\Spore Lamp\sporelamp_wilt_0.png" />
+    <Content Include="Art\Art Source\Spore Lamp\ui_0.png" />
+    <Content Include="Art\Art Source\Tropicalgae Seed\seed_tropicalgae_0.png" />
+    <Content Include="Art\Art Source\Tropicalgae Seed\ui_0.png" />
+    <Content Include="Art\Art Source\Tropicalgae\tropicalgae_0.png" />
+    <Content Include="Art\Art Source\Tropicalgae\tropicalgae_1.png" />
+    <Content Include="Art\Art Source\Tropicalgae\tropicalgae_2.png" />
+    <Content Include="Art\Art Source\Tropicalgae\tropicalgae_place_0.png" />
+    <Content Include="Art\Art Source\Tropicalgae\tropicalgae_wilt_0.png" />
+    <Content Include="Art\Art Source\Tropicalgae\ui_0.png" />
+    <Content Include="Art\Steam Art\Omni Flora All Plants.png" />
+    <Content Include="Art\Steam Art\Omni Flora Screenshot 1.png" />
+    <Content Include="Art\Steam Art\Omni Flora Screenshot 2.png" />
+    <Content Include="Art\Steam Art\Omni Flora Screenshot 3.png" />
+    <Content Include="Art\Steam Art\Omni Flora Screenshot 4.png" />
+    <Content Include="Art\Steam Art\Omni Flora Screenshot 5.png" />
+    <Content Include="Art\Steam Art\Omni Flora Thumbnail.png" />
+    <Content Include="Art\Steam Art\Omni Flora Title.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
