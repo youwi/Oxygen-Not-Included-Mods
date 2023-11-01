@@ -12,6 +12,7 @@ using VoronoiTree;
 using TemplateClasses;
 using static MiniBase.MiniBaseConfig;
 using static MiniBase.MiniBaseUtils;
+using static ProcGenGame.TemplateSpawning;
 
 namespace MiniBase
 {
@@ -70,7 +71,8 @@ namespace MiniBase
             Log("Generating starting template");
             var startPos = Vec(Left() + (Width() / 2) - 1, Bottom() + (Height() / 2) + 2);
             data.gameSpawnData.baseStartPos = startPos;
-            var templateSpawnTargets = new List<KeyValuePair<Vector2I, TemplateContainer>>();
+            //var templateSpawnTargets = new List<KeyValuePair<Vector2I, TemplateContainer>>();
+            var templateSpawnTargets = new List<TemplateSpawner>();//添加了代码
             var reservedCells = new HashSet<Vector2I>();
             TemplateContainer startingBaseTemplate = TemplateCache.GetTemplate(gen.Settings.world.startingBaseTemplate);
 
@@ -86,7 +88,16 @@ namespace MiniBase
                 reservedCells.Add(new Vector2I(cell.location_x, cell.location_y) + startPos);
             }
             startingBaseTemplate.cells.RemoveAll((c) => (c.location_x == -8) || (c.location_x == 9)); // Trim the starting base area
-            templateSpawnTargets.Add(new KeyValuePair<Vector2I, TemplateContainer>(startPos, startingBaseTemplate));
+                                     
+            // templateSpawnTargets.Add(new KeyValuePair<Vector2I, TemplateContainer>(startPos, startingBaseTemplate));
+            TerrainCell terrainCell = data.overworldCells.Find((Predicate<TerrainCell>)(tc => tc.node.tags.Contains(WorldGenTags.StartLocation)));
+            if (terrainCell == null)
+            {
+                Log("Null Terrain Cell");
+            }
+            Log("Done Looking for starting Terrain Cell");
+            startingBaseTemplate.cells.RemoveAll((c) => (c.location_x == -8) || (c.location_x == 9)); // Trim the starting base area
+            templateSpawnTargets.Add(new TemplateSpawner(startPos, startingBaseTemplate.GetTemplateBounds(), startingBaseTemplate, terrainCell));
 
             // Geysers
             Log("Placing features");
@@ -115,16 +126,24 @@ namespace MiniBase
             coreCells.ExceptWith(borderCells);
             updateProgressFn(UI.WORLDGEN.DRAWWORLDBORDER.key, 1f, WorldGenProgressStages.Stages.DrawWorldBorder);
 
+           // templateSpawnTargets.va
             // Settle simulation
             // This writes the cells to the world, then performs a couple of game frames of simulation, then saves the game
             Log("Settling sim");
-            running.SetValue(WorldGenSimUtil.DoSettleSim(gen.Settings, ref cells, ref bgTemp, ref dc, updateProgressFn, data, templateSpawnTargets, errorCallback, baseId));
-
+            running.SetValue(WorldGenSimUtil.DoSettleSim(gen.Settings,
+                ref cells, ref bgTemp, ref dc, updateProgressFn, data, 
+                templateSpawnTargets, 
+                errorCallback, baseId));
+           // TemplateSpawner templateSpawner=new TemplateSpawner();
+            // templateSpawner.se
             // Place templates, pretty much just the printing pod
             Log("Placing templates");
             var claimedCells = new Dictionary<int, int>();
-            foreach (KeyValuePair<Vector2I, TemplateContainer> keyValuePair in templateSpawnTargets)
-                data.gameSpawnData.AddTemplate(keyValuePair.Value, keyValuePair.Key, ref claimedCells);
+            // foreach (KeyValuePair<Vector2I, TemplateContainer> keyValuePair in templateSpawnTargets)
+            //    data.gameSpawnData.AddTemplate(keyValuePair.Value, keyValuePair.Key, ref claimedCells);
+
+            foreach (var templateSpawner in templateSpawnTargets)
+                data.gameSpawnData.AddTemplate(templateSpawner.container, templateSpawner.position, ref claimedCells);
 
             // Add plants, critters, and items
             Log("Adding critters, etc");
