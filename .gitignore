@@ -1,5 +1,4 @@
 # Versepelles Ignored Files
-*.sln
 kanimal-cli.exe
 kanimal-cli.pdb
 **/Art Source/*/output/
