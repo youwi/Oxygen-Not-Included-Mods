@@ -4,8 +4,8 @@ asteroidIcon: asteroid_swamp_rocket_kanim
 disableWorldTraits: true
 
 worldsize:
-  X: 128
-  Y: 128
+  X: 76
+  Y: 50
 layoutMethod: PowerTree
 
 worldTraitRules:  []  #关闭特性设置. 很容易崩溃

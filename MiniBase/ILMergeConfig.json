@@ -1,11 +1,11 @@
 ﻿{
 	"General": {
 		"InputAssemblies": [
-			"PLib.dll",
-			"Newtonsoft.Json.dll"
+			"PLib.dll"
+			
 
 		],
-		"OutputFile": "$(TargetDir)mod-MiniBase-merged.dll"
+		"OutputFile": "$(TargetDir)MiniBase-merged.dll"
 	},
 	"Advanced": {
 		"AllowDuplicateType": null,

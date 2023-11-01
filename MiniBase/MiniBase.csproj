@@ -286,7 +286,6 @@
     <None Include="resource\mod_info.yaml" />
     <None Include="resource\worldgen\clusters\MiniBase.yaml" />
     <None Include="resource\worldgen\worlds\MiniBase.yaml" />
-    <None Include="resource\worldgen\worlds\OneStar.yaml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ilmerge">
@@ -305,13 +304,13 @@
   <ItemGroup>
     <Content Include="ILMergeOrder.txt" />
     <Content Include="resource\Asteroid_minibase.png" />
-    <Content Include="README.txt" />
+    <None Include="README.md" />
     <None Include="ILMergeConfig.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>mkdir  $(ONI_MOD_LOCAL)\$(ProjectName)
-copy /y $(TargetDir)mod-$(ProjectName)*  $(ONI_MOD_LOCAL)\$(ProjectName)\
+copy /y $(TargetDir)$(ProjectName)*-merged*  $(ONI_MOD_LOCAL)\$(ProjectName)\
 xcopy /y /s $(ProjectDir)resource\*  $(ONI_MOD_LOCAL)\$(ProjectName)\</PostBuildEvent>
   </PropertyGroup>
 </Project>
