@@ -302,6 +302,7 @@
     <Content Include="Art\Temperate Beta.png" />
     <Content Include="ILMergeOrder.txt" />
     <Content Include="resource\anim\assets\Asteroid_minibase\Asteroid_minibase_0.png" />
+    <Content Include="resource\anim\worldgen\asteroid_minibase\minibase.png" />
     <Content Include="resource\Asteroid_minibase.png" />
   </ItemGroup>
   <ItemGroup>
@@ -316,6 +317,8 @@
     <None Include="README.md" />
     <None Include="resource\anim\assets\Asteroid_minibase\Asteroid_minibase_anim.bytes" />
     <None Include="resource\anim\assets\Asteroid_minibase\Asteroid_minibase_build.bytes" />
+    <None Include="resource\anim\worldgen\asteroid_minibase\minibase_anim.bytes" />
+    <None Include="resource\anim\worldgen\asteroid_minibase\minibase_build.bytes" />
     <None Include="resource\dlc\expansion1\worldgen\clusters\MiniBaseDLC.yaml" />
     <None Include="resource\dlc\expansion1\worldgen\worlds\MiniBaseDLC.yaml" />
     <None Include="resource\mod.yaml" />
