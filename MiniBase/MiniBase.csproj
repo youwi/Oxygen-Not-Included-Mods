@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\ILMerge.3.0.41\build\ILMerge.props" Condition="Exists('..\packages\ILMerge.3.0.41\build\ILMerge.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,14 +34,240 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="ArabicSupport">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\ArabicSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PLib, Version=4.13.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PLib.4.13.0\lib\net471\PLib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="Unity.MemoryProfiler">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Unity.MemoryProfiler.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GIModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.GIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.TextCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsNativeModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.UIElementsNativeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.UnityCurlModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.VirtualTexturingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>G:\Steam\steamapps\Common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
@@ -48,7 +277,6 @@
     <Compile Include="MiniBasePatches.cs" />
     <Compile Include="MiniBaseUtils.cs" />
     <Compile Include="MiniBaseWorldGen.cs" />
-    <Compile Include="OldUtils.cs" />
     <Compile Include="Profiles\MiniBaseBiomeProfiles.cs" />
     <Compile Include="Profiles\MiniBaseCoreBiomeProfiles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +301,7 @@
     <Content Include="Art\Swamp Beta.png" />
     <Content Include="Art\Temperate Beta.png" />
     <Content Include="ILMergeOrder.txt" />
+    <Content Include="resource\anim\assets\Asteroid_minibase\Asteroid_minibase_0.png" />
     <Content Include="resource\Asteroid_minibase.png" />
   </ItemGroup>
   <ItemGroup>
@@ -83,7 +312,10 @@
     <None Include="ILMerge.props" />
     <None Include="ILMergeConfig.json" />
     <None Include="mod_info.yaml" />
+    <None Include="packages.config" />
     <None Include="README.md" />
+    <None Include="resource\anim\assets\Asteroid_minibase\Asteroid_minibase_anim.bytes" />
+    <None Include="resource\anim\assets\Asteroid_minibase\Asteroid_minibase_build.bytes" />
     <None Include="resource\dlc\expansion1\worldgen\clusters\MiniBaseDLC.yaml" />
     <None Include="resource\dlc\expansion1\worldgen\worlds\MiniBaseDLC.yaml" />
     <None Include="resource\mod.yaml" />
@@ -93,4 +325,18 @@
     <None Include="worldgen\worlds\MiniBase.yaml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+mkdir  $(ONI_MOD_LOCAL)\$(ProjectName)
+"$(ILMergeConsolePath)"  /out:$(TargetName)-merged.dll $(TargetName).dll PLib.dll  
+
+copy /y $(TargetDir)$(ProjectName)*-merged*  $(ONI_MOD_LOCAL)\$(ProjectName)\
+xcopy /y /s $(ProjectDir)resource\*  $(ONI_MOD_LOCAL)\$(ProjectName)\</PostBuildEvent>
+  </PropertyGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\ILMerge.3.0.41\build\ILMerge.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ILMerge.3.0.41\build\ILMerge.props'))" />
+  </Target>
 </Project>

@@ -5,15 +5,20 @@
 2 修改事件脚本
 3 配置Nuget,更新2个库
 
+# 脚本A:
+mkdir  $(ONI_MOD_LOCAL)\$(ProjectName)
+"$(ILMergeConsolePath)"  /out:$(TargetName)-merged.dll $(TargetName).dll PLib.dll  
+copy /y $(TargetDir)$(ProjectName)*-merged*  $(ONI_MOD_LOCAL)\$(ProjectName)\
+xcopy /y /s $(ProjectDir)resource\*  $(ONI_MOD_LOCAL)\$(ProjectName)\
 
+# 脚本B:
 "$(ILMergeConsolePath)" /lib:"$(SolutionDir)/PLib/" /out:$(TargetName)-merged.dll $(TargetName).dll PLib.dll /targetplatform:v4,C:/Windows/Microsoft.NET/Framework64/v4.0.30319
 mkdir "%HOMEPATH%\Documents\Klei\OxygenNotIncluded\mods\dev\$(ProjectName)"
+
 copy "$(TargetName)-merged.dll" "%HOMEPATH%\Documents\Klei\OxygenNotIncluded\mods\dev\$(ProjectName)\$(ProjectName)-merged.dll"
 
 "$(ILMergeConsolePath)"  /out:$(TargetName)-merged.dll $(TargetName).dll PLib.dll  
-
 xcopy /y /s $(TargetDir)\mod*  $(ONI_MOD_LOCAL)\$(ProjectName)\
-
 xcopy /y /s $(TargetDir)\mod*  $(ONI_MOD_LOCAL)\$(ProjectName)\
 
 
@@ -28,7 +33,3 @@ xcopy /y /s $(TargetDir)\mod*  $(ONI_MOD_LOCAL)\$(ProjectName)\
 
 // "Newtonsoft.Json.dll"
 
-# 脚本:
-mkdir  $(ONI_MOD_LOCAL)\$(ProjectName)
-copy /y $(TargetDir)$(ProjectName)*-merged*  $(ONI_MOD_LOCAL)\$(ProjectName)\
-xcopy /y /s $(ProjectDir)resource\*  $(ONI_MOD_LOCAL)\$(ProjectName)\

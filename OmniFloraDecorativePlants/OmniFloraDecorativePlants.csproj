@@ -202,5 +202,11 @@
     <Content Include="Art\Steam Art\Omni Flora Thumbnail.png" />
     <Content Include="Art\Steam Art\Omni Flora Title.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MiniBase\MiniBase.csproj">
+      <Project>{b9171bd4-998f-499d-b16d-862128205fa8}</Project>
+      <Name>MiniBase</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
